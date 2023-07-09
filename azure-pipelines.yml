@@ -10,8 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: git clone https://github.com/akhilnarang/scripts.git
+          cd scripts
+          ./setup/android_build_env.sh
+  displayName: 'Setup build environment'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
