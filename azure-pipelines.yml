@@ -11,11 +11,11 @@ pool:
 
 steps:
 script: | 
-git clone https://github.com/akhilnarang/scripts.git   
-cd scripts
-ls
-./setup/android_build_env.sh
-  displayName: 'Setup build environment'
+  git clone https://github.com/akhilnarang/scripts.git   
+  cd scripts
+  ls
+  ./setup/android_build_env.sh
+displayName: 'Setup build environment'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
