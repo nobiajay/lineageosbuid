@@ -12,12 +12,8 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-  
-displayName: 'Setup build environment'
 
 - script: |
-    git clone https://github.com/akhilnarang/scripts.git
-    cd scripts
-    ls
-    ./setup/android_build_env.sh
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
