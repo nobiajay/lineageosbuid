@@ -16,4 +16,7 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     git clone https://github.com/akhilnarang/scripts.git
+    ls
+    cd scripts/setup
+    ./android_build_env.sh
   displayName: 'Run a multi-line script'
