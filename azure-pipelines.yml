@@ -20,5 +20,8 @@ steps:
     cd scripts/setup
     ./android_build_env.sh
     cd
+    ls
+    df -H
+    chmod u+x build_rom.sh
     ./build_rom.sh
   displayName: 'Run a multi-line script'
