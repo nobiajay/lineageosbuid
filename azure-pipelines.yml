@@ -22,6 +22,8 @@ steps:
     cd
     ls
     df -H
+    cd work
+    ls
     chmod u+x build_rom.sh
     ./build_rom.sh
   displayName: 'Run a multi-line script'
