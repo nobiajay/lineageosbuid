@@ -1,0 +1,25 @@
+sudo: required
+dist: trusty
+
+language: generic
+
+env:
+  global:
+    - LINEAGE_VERSION=lineage-20.0
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y openjdk-8-jdk android-tools-adb android-tools-fastboot
+
+install:
+  # Set up the build environment and LineageOS source code
+  - git clone https://github.com/LineageOS/android_vendor_lineage.git vendor/lineage
+  - git clone https://github.com/LineageOS/android.git -b $LINEAGE_VERSION
+  - source build/envsetup.sh
+
+script:
+  # Start the build process
+  - breakfast device_codename # Replace 'device_codename' with the actual device codename you want to build for
+  - mka bacon # 'bacon' is the build target for LineageOS (change this based on your needs)
+
+
